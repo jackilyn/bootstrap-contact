@@ -33,7 +33,7 @@ if(isset($_POST['submit'])) {
 	//Check to make sure sure that a valid email address is submitted
 	if(trim($_POST['email']) == '')  {
 		$hasError = true;
-	} else if (!eregi("^[A-Z0-9._%-]+@[A-Z0-9._%-]+\.[A-Z]{2,4}$", trim($_POST['email']))) {
+	} else if (!filter_var( trim($_POST['email'], FILTER_VALIDATE_EMAIL ))) {
 		$hasError = true;
 	} else {
 		$email = trim($_POST['email']);
