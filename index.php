@@ -101,11 +101,11 @@ if(isset($_POST['submit'])) {
             <legend>Send Us a Message</legend>
 
             <?php if(isset($hasError)) { //If errors are found ?>
-              <p class="alert-message error">Please check if you've filled all the fields with valid information and try again. Thank you.</p>
+              <p class="alert alert-danger">Please check if you've filled all the fields with valid information and try again. Thank you.</p>
             <?php } ?>
 
             <?php if(isset($emailSent) && $emailSent == true) { //If email is sent ?>
-              <div class="alert-message success">
+              <div class="alert alert-success">
                 <p><strong>Message Successfully Sent!</strong></p>
                 <p>Thank you for using our contact form, <strong><?php echo $name;?></strong>! Your email was successfully sent and we&rsquo;ll be in touch with you soon.</p>
               </div>
