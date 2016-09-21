@@ -64,6 +64,7 @@
     } else {
       $message = strip($_POST["message"]);
     }
+    $subject = strip($_POST["subject"]);
 
     if (empty($_POST["subject"])) {
       $subjectError = "Select a subject";
@@ -95,7 +96,7 @@
 
       $mail->addAddress(getenv('EMAIL_TO'), getenv('EMAIL_NAME'));
 
-      $mail->Subject = getenv('EMAIL_SUBJECT');
+      $mail->Subject = $subject;
 
       $mail->msgHTML($html_temp);
 
