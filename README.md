@@ -12,7 +12,7 @@ Make sure all dependencies have been installed before moving on:
 ## Installation
 
 ```shell
-# @ your-theme-name folder
+# cd your-theme-name folder
 $ composer install
 ```
 
